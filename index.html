@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frase Aleatoria</title>
+</head>
+<body>
+    <h1>Frase Aleatoria</h1>
+    <p id="frase"></p>
+
+    <script>
+        // Array de frases
+        var frases = [
+            "aire para ayudar al avatar",
+            "fuego para ayudar a capturar al avatar",
+            "piedra para ayudar al avatar",
+            "es el avatar, y ha venido para salvar el mundo",
+            "agua para ayudar al avatar"
+        ];
+
+        // Función para seleccionar aleatoriamente una frase
+        function seleccionarFrase() {
+            var indice = Math.floor(Math.random() * frases.length); // Genera un número aleatorio entre 0 y la longitud del array
+            return frases[indice]; // Devuelve la frase correspondiente al índice generado
+        }
+
+        // Al cargar la página, selecciona una frase aleatoria y la muestra en el párrafo
+        window.onload = function() {
+            var fraseAleatoria = seleccionarFrase();
+            document.getElementById("frase").textContent = fraseAleatoria;
+        };
+    </script>
+</body>
+</html>
